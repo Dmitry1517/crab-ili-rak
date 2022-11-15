@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exemple</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="app">
+        <div class="container">
+          <dialog class="modal">
+            <div class="modal__text">
+              {{ modal.title1 }} <br /><br />{{ modal.text }}
+            </div>
+            <div class="modal__btns">
+              <a href="https://play.google.com" class="modal__btn">
+                Я - рак <br />
+                и удаляю игру
+              </a>
+              <button @click="closeModal" class="modal__btn">
+                {{ modal.btn1 }} <br />
+                {{ modal.btn2 }}
+              </button>
+            </div>
+          </dialog>
+
+          <dialog class="modalend">
+            <div class="modal__text">
+              Ну что ж... <br /><br />
+              Ваша квалификация - РАК <br /><br />
+              Вам необходимо перейти в <br /><br />
+              Google Play и удалить игру!
+            </div>
+          </dialog>
+
+          <div class="task">{{ task }}</div>
+          <div class="task__info">
+            Осталось попыток: <span class="task__txt">{{ life }}</span>
+          </div>
+
+          <div class="field">
+            <div class="field__game">
+              <div
+                v-for="f in field"
+                key="f.id"
+                class="field__item"
+                :class="{ target: f.target }"
+                v-html="f.tankImg"
+                :id="f.id"
+              ></div>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="buttons__wrapper">
+              <div class="buttons__block" style="width: 50%">
+                <div class="buttons__empty"></div>
+                <button @click="translateUp" class="buttons__up">
+                  &#9650;
+                </button>
+                <div class="buttons__empty"></div>
+                <button @click="translateLeft" class="buttons__left">
+                  &#9664;
+                </button>
+                <div class="buttons__empty"></div>
+                <button @click="translateRight" class="buttons__right">
+                  &#9654;
+                </button>
+                <div class="buttons__empty"></div>
+                <button @click="translateDown" class="buttons__down">
+                  &#9660;
+                </button>
+                <div class="buttons__empty"></div>
+              </div>
+              <div @click="fire" class="buttons__fire" style="width: 50%">
+                <div class="buttons__fire-icon">&#128640;</div>
+                <div class="buttons__fire-text">Fire !</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

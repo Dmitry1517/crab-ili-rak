@@ -1,0 +1,54 @@
+.squere {
+  padding: 5px 25px;
+  background: #f7f7f8;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.modal,
+.modalend {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 320px;
+  border: 1px solid #c4c4c4;
+  border-radius: 15px;
+  padding: 30px;
+  transition: 0.5s all;
+}
+
+.modal__text {
+  margin-top: 20px;
+  text-align: center;
+  color: indigo;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.modal__close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.modal__btns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal__btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  color: indigo;
+  border-radius: 3px;
+  border: 1px solid indigo;
+  background: #fff;
+}

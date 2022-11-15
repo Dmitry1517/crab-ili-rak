@@ -1,0 +1,93 @@
+.field {
+  display: flex;
+  justify-content: center;
+}
+
+.field__game {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid grey;
+}
+
+.field__item {
+  /*width: 25%;
+	height: 25%;*/
+  border: 1px solid #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field__img {
+  width: 100%;
+  height: 100%;
+}
+
+.target {
+  width: 100%;
+  height: 100%;
+  border: 2px solid green;
+  border-radius: 50%;
+  transition: 0.5s all;
+}
+
+.task {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.task__txt {
+  font-size: 18px;
+}
+
+.task__info {
+  text-align: center;
+  font-size: 12px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons__wrapper {
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #f7f7f8;
+  display: flex;
+}
+
+.buttons__block {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.buttons__up,
+.buttons__left,
+.buttons__right,
+.buttons__down {
+  border-radius: 50%;
+  border: 1px solid green;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.buttons__fire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttons__fire-icon {
+  padding: 15px;
+  border-radius: 50%;
+  border: 3px solid #c4c4c4;
+}
